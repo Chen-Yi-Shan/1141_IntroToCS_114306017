@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1_114306017</title>
+</head>
+<body>
+   <form action = "/action_page.php">
+    <table border="1">
+        <tr>
+            <th colspan = "3"> About -- 114306017</th>
+        </tr>
+
+        <tr>
+            
+            <td rowspan = "3" style="text-align:center;"> 
+               <img src = "personal photo.png" alt = "personal picture" width="100" height="80"><br>personal photo</td>
+            <td colspan = "2"> Name:
+               <input name = "name" type = "text" size = "25" maxlength = "30"><br>
+               Gender:
+               <input type="radio" name="gender" value="male"> Male 
+               <input type="radio" name="gender" value="female"> Female 
+               <input type="radio" name="gender" value="other"> Other
+            </td>
+        </tr>
+
+        <tr>
+            <td>County:
+                  <select name = "county">
+                     <option value = "Taipei"> Taipei </option>
+                     <option value = "Tainan"> Tainan </option>
+                     <option value = "Taichung"> Taichung </option>
+                     <option value = "Taoyuan"> Taoyuan </option>
+                  </select>
+            </td>
+            <td>
+                  <lable for = "birthday"> Birthday:</label>
+                  <input type = "date" id = "birthday" name = "birthday"
+                  min = "2006-01-01" max = "2007-12-31">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan = "2">
+               <form action = "/action_page.php">
+                  E-mail: 
+                  <input type = "email" name = "email">
+            </td>
+         </tr>
+
+        <tr> 
+         <td> Hobby </td>
+         <td colspan = "2">
+            <input type="checkbox" name="hobby" value="swimming"> Swimming
+            <input type="checkbox" name="hobby" value="volleyball"> Volleyball
+            <input type="checkbox" name="hobby" value="movie"> Movie
+            <input type="checkbox" name="hobby" value="game"> Game
+            <input type="checkbox" name="hobby" value="sleep"> sleep
+         </td>
+        </tr>
+
+        <tr> 
+         <td> Skill
+          <td colspan = "2">
+             <input type="checkbox" name="skill" value="java"> Java
+             <input type="checkbox" name="skill" value="html"> HTML
+             <input type="checkbox" name="skill" value="python"> Python
+             <input type="checkbox" name="skill" value="microsoft office"> Microsoft Office
+             <input type="checkbox" name="skill" value="premiere"> Premiere
+           </td>
+        </tr>
+
+        <tr> 
+          <td> Say Something</td>
+           <td colspan = "2">
+              <input type = "text" name = "saysomething" placeholder="Say something here.">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="3" >
+             <input type = "submit" value = "提交"> 
+            <input type = "reset" value = "重設"> 
+          </td> 
+        </tr>
+      </table>
+   </form>
+</body>
+</html>
