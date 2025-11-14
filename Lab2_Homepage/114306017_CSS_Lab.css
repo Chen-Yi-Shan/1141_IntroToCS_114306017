@@ -1,0 +1,52 @@
+.navbar {
+	position: absolute;
+	top:10em;
+	left:0em;
+	width:84em;
+	display: flex;
+	justify-content: space-around; /* 平均分配四個 li */
+	background-color: #ddd;
+	color:white;
+	list-style: none;
+	padding:0em;
+	margin:0;
+
+}
+.navbar a {
+	color:black;
+	text-decoration: none;	
+	padding: 1em 2em;
+}
+.navbar a:hover {
+	color:#331e6b;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-content{
+	display: none;
+	list-style: none;
+	position: absolute;
+	background-color: #8286b5;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content{
+	display:block;
+}
+
+.dropdown-content li a:hover {
+    color: white;   
+}
+.bottom {
+    background-color: lightblue;
+    color: black;
+    padding: 2em;
+    min-height: 100vh; /*100%螢幕填滿*/
+}
+
+
