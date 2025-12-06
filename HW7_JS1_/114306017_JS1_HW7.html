@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>114306017_HW7_1A2B</title>
+</head>
+<body>
+    <h1>114306017_HW7_1A2B</h1>
+
+    <input type="text" id="guessInput" maxlength="4" placeholder="Enter 4 unique numbers">
+    <button onclick="play()">Guess!</button>
+
+    <p>Game Record：</p>
+    <div id="record"></div>
+
+    <script>
+        // 生成答案
+        var answer = generateAnswer();
+        var attempts = 0;
+        var gameOver = false;
+
+        function generateAnswer() {
+            var digits = ['0','1','2','3','4','5','6','7','8','9'];
+            var ansArr = [];
+            for (var i = 0; i < 4; i++) {
+                var index = Math.floor(Math.random() * digits.length);
+                ansArr.push(digits[index]);
+                digits.splice(index, 1); // 移除已選數字
+            }
+            return ansArr.join(''); // 轉成字串
+        }
+
+        // 驗證輸入
+        function isValid(str) {
+            if (str.length != 4) return false;
+            if (isNaN(str)) return false; // 必須全是數字
+            var set = new Set(str.split(''));
+            return set.size == 4; // 無重複
+        }
+
+        // 計算 A/B
+        function checkAB(guess, ans) {
+            var A = 0, B = 0;
+            for (var i = 0; i < 4; i++) {
+                if (guess[i] == ans[i]) {
+                    A++;
+                } else if (ans.includes(guess[i])) {
+                    B++;
+                }
+            }
+            return A + "A" + B + "B";
+        }
+
+      
+
+        // 每次點擊 Guess 執行
+        function play() {
+            if (gameOver) {
+                alert("遊戲已結束！重新整理以開始。");
+                return;
+            }
+            var inputField = document.getElementById('guessInput');
+            var guess = inputField.value.trim();
+
+            if (!isValid(guess)) {
+                alert("輸入錯誤！請輸入4位數且無重複的數字。");
+                return;
+            }
+
+            attempts++;
+            var result = checkAB(guess, answer);
+
+            // 顯示記錄
+            var recordDiv = document.getElementById('record');
+            recordDiv.innerHTML += "第 " + attempts + " 次: " + guess + " → " + result + "<br>";
+
+            // 清空輸入欄
+            inputField.value = "";
+
+            if (result == "4A0B") {
+                alert("恭喜答對！總共猜了 " + attempts + " 次。");
+                gameOver = true;
+            }
+        }
+
+    </script>
+</body>
+</html>
