@@ -1,0 +1,19 @@
+
+.container {
+    width: 600px;
+    margin: 0 auto; /* 水平置中 */
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+/* 表格格子的線條與文字置中 */
+th, td {
+    border: 1px solid black; /* 最重要的表格線 */
+    padding: 8px;            /* 讓字不要黏在線上 */
+    text-align: center;      /* 文字置中 (符合簡報截圖) */
+}
