@@ -1,0 +1,76 @@
+/* 讓整個頁面置中 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 外框 */
+.calc-container {
+    background: white;
+    width: 330px;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* 標題 */
+.calc-container h2 {
+    margin-bottom: 20px;
+}
+
+/* 標籤 */
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* 文字輸入框 */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* 下拉選單 */
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* 計算按鈕 */
+#calcBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: #8fbecc;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* 結果文字 */
+#resultDisplay {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: bold;
+}
